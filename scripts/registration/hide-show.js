@@ -1,3 +1,4 @@
+const container = document.getElementsByClassName("container")[0];
 const eyeicon = document.getElementsByClassName("showhide")[0];
 const passField = document.getElementById("pass-input");
 
@@ -13,14 +14,13 @@ eyeicon.addEventListener('click', (e)=>{
 })
 
 
-const container = document.getElementsByClassName("container")[0];
-const signup = document.querySelector(".signup-link");
-const login = document.querySelector(".login-link");
+const signupLink = document.querySelector(".signup-link");
+const loginLink = document.querySelector(".login-link");
 
 // show/hide login/signup form
-signup.addEventListener('click', (e)=>{
+signupLink.addEventListener('click', (e)=>{
     container.classList.add("active");
 })
-login.addEventListener('click', (e)=>{
+loginLink.addEventListener('click', (e)=>{
     container.classList.remove("active");
 })

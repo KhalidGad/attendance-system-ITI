@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    
+
 }
 
-body{
+body {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@ body{
     background-color: #4070f4;
 }
 
-.container{
+.container {
     background-color: white;
     position: relative;
     max-width: 400px;
@@ -27,17 +27,17 @@ body{
     margin: 0 20px;
 }
 
-.container .forms{
+.container .forms {
     display: flex;
     align-items: center;
-    height: 450px;  
+    height: 450px;
     width: 200%;
     /* background-color:  yellow; */
     /* background-color: white; */
     transition: height 0.2s ease;
 }
 
-.container .form{
+.container .form {
     width: 50%;
     padding: 30px;
     border-radius: 10px;
@@ -45,43 +45,48 @@ body{
     transition: margin-left 0.2s ease;
 }
 
-.container.active .login{
+.container.active .login {
     margin-left: -50%;
     opacity: 0;
     transition: margin-left 0.2s ease, opacity 0.2s ease;
     /* height:  600px; */
     /* margin-left: -50%; */
-} 
+}
 
-.container .signup{
+.container .signup {
     opacity: 0;
     transition: opacity 0.2s ease;
 }
-.container.active .signup{
+
+.container.active .signup {
     opacity: 1;
     transition: opacity 0.2s ease;
 }
 
-.container.active .forms{
-    height: 670px;
+.container.active .forms {
+    height: 100%;
 }
 
-.container .form .title{
+.container .form .title {
     position: relative;
     font-size: 28px;
     font-weight: bold;
 }
 
-.form .input-field{
+.form .field{
+    margin-top: 20px;
+}
+
+.form .input-field {
     /* background-color: yellow; */
     position: relative;
     height: 50px;
     /* width: 100%; */
-    margin-top: 30px;
+    
 
 }
 
-.input-field input{
+.input-field input {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -93,11 +98,12 @@ body{
     /* border-top: 2px solid transparent; */
     /* transition: all 0.2s ease; */
 }
-.input-field input:focus{
+
+.input-field input:focus {
     border-bottom: 2px solid #4070f4;
 }
 
-.input-field i{
+.input-field i {
     position: absolute;
     top: 50%;
     /* left: 0; */
@@ -107,21 +113,21 @@ body{
     transition: all 0.2s ease;
 }
 
-.input-field input:focus ~ i{
-   color: #4070f4;
+.input-field input:focus~i {
+    color: #4070f4;
 }
 
-.input-field .showhide{
+.input-field .showhide {
     right: 0;
     padding: 10px;
     cursor: pointer;
 }
 
-.form .button{
+.form .button {
     margin-top: 40px;
 }
 
-.form .button input{
+.form .button input {
     border: none;
     color: white;
     letter-spacing: 2px;
@@ -133,11 +139,81 @@ body{
     transition: all 0.5s ease;
 }
 
-.button input:hover{
+.button input:hover {
     background-color: #1d409e;
 }
 
-.form .login-signup{
+.form .login-signup {
     margin-top: 30px;
     text-align: center;
+}
+
+.popup {
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    box-shadow: 0 2px 10px black;
+    visibility: hidden;
+    transition: all 0.4s;
+}
+
+.open-popup {
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+.hide-form{
+    visibility: hidden;
+}
+
+.popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px black;
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: #7cdd5a;
+    color: white;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px black;
+}
+
+.field .error{
+    /* display: flex; */
+    align-items: center;
+    margin-top: 5px;
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+
+.error .error-icon{
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.invalid .error{
+    display: flex;
 }
