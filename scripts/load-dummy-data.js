@@ -55,9 +55,39 @@ users = [
         lname: 'gad',
         address: 'mansoura',
         email: 'khaled@gmail.com',
-        age: 22,
+        age: 26,
         super: false,
         username: 'khaled2',
+        password: '1234',
+        attendance: [
+            {
+                year: 2023,
+                months: [
+                    {
+                        month: 1,
+                        attend: 20,
+                        late: 5,
+                        absent: 10,
+                        days: [
+                            {
+                                day: 1,
+                                start: '8:00',
+                                end: '12:00'
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        fname: 'Radwa',
+        lname: 'Hatem',
+        address: 'Giza',
+        email: 'khaled@gmail.com',
+        age: 23,
+        super: false,
+        username: 'radwa',
         password: '1234',
         attendance: [
             {
