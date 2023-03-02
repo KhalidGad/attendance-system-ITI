@@ -18,11 +18,11 @@ Attendlist = document.getElementById("AttendList");
 
 const displayTableDef = window.getComputedStyle(Dailyreport).display;
 
-userName = "SuperEmp" ;
-if (userName != "SuperEmp" )
-{
-    AttendanceOPtion.style.display="none" ;
-}
+// userName = "SuperEmp" ;
+// if (userName != "SuperEmp" )
+// {
+//     AttendanceOPtion.style.display="none" ;
+// }
 
 function selectTable(option)
 {
