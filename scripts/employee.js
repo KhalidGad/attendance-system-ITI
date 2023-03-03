@@ -29,11 +29,11 @@ Attendlist = document.getElementById("AttendList");
 
 const displayTableDef = window.getComputedStyle(Dailyreport).display;
 
-userName = "SuperEmp" ;
-if (userName != "SuperEmp" )
-{
-    AttendanceOPtion.style.display="none" ;
-}
+// userName = "SuperEmp" ;
+// if (userName != "SuperEmp" )
+// {
+//     AttendanceOPtion.style.display="none" ;
+// }
 
 function selectTable(option)
 {
@@ -95,3 +95,17 @@ function build_month_report ()
        });
 }
 
+address=JSON.parse(document.cookie.split("=")[1]).address
+document.getElementById("address").innerText="Address : "+address;
+
+fname=JSON.parse(document.cookie.split("=")[1]).fname
+document.getElementById("fname").innerText="First Name : "+fname;
+
+lname=JSON.parse(document.cookie.split("=")[1]).lname
+document.getElementById("lname").innerText="Last Name :  "+lname;
+
+age=JSON.parse(document.cookie.split("=")[1]).age
+document.getElementById("age").innerText="Age :  "+age;
+
+// email=JSON.parse(document.cookie.split("=")[1]).email
+// document.getElementById("email").innerText="Email :  "+email;

@@ -12,8 +12,6 @@
     --border-color:#e6e5e5;
     --toggle-color: #ddd;
     --box1-color:#4da3ff;
-    --box2-color:#ffe6ac;
-    --box3-color:#e7d1fc;
     --title-icon-color:#fff;
     --table-head-color:#286090;
 
@@ -297,12 +295,6 @@ nav.close ~ .dashboard .top{
     font-size: 24px;
 }
 
-/* .dash-content .title .text{
-    font-size: 24px;
-    font-weight: 500;
-    color: var(--text-color);
-    margin-left: 10px;
-} */
 
 .dash-content .boxes{
     display:flex;
@@ -311,19 +303,108 @@ nav.close ~ .dashboard .top{
     
 }
 
+.activity .title .text{
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    color: black
+}
+
+body.dark .activity .title .text,
+body.dark .activity .title i
+{
+    color: var(--text-color);
+}
+
 .dash-content .boxes .box{
     display: flex;
     margin: auto;
     margin-top: 30px;
     flex-direction: column;
-    align-items: center;
     border-radius: 12px;
+    align-items: center;
     width: calc(100% - 100px);
     padding: 40px 40px;
     border: 1px solid #ddd;
     background-color: var(#fff);
+    font-size: 50px;
    
 }
+
+.boxes .box #fname{
+    font-size: 0.40em;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    word-spacing: 3px;
+}
+
+body.dark .boxes .box #fname{
+    color: var(--text-color);
+}
+
+body.dark .boxes .box #age{
+    color: var(--text-color);
+}
+body.dark .boxes .box #address{
+    color: var(--text-color);
+}
+body.dark .boxes .box #lname{
+    color: var(--text-color);
+}
+.boxes .box #address{
+    font-size: 0.40em;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    word-spacing: 3px;
+}
+.boxes .box #lname{
+    font-size: 0.40em;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    word-spacing: 3px;
+}
+.boxes .box #age{
+    font-size: 0.40em;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    word-spacing: 3px;
+}
+
+.boxes .box #Age{
+    font-size: 0.35em;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    word-spacing: 3px;
+
+}
+
+body.dark .boxes .box #firstName{
+    color: var(--text-color);
+}
+body.dark .boxes .box #Address{
+    color: var(--text-color);
+}
+body.dark .boxes .box #Age{
+    color: var(--text-color);
+}
+.boxes .box #Address{
+    font-size: 0.35em;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    word-spacing: 3px;
+}
+.boxes .box #firstName{
+    font-size: 0.35em;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    word-spacing: 3px;
+}
+
+
+/* .boxes .box #email{
+    font-size: 0.30em;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+} */
 
 .boxes.box i{
     font-size: 25px;

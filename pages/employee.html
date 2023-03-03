@@ -100,15 +100,14 @@
 
     <div class="dash-content">
       <div class="overview">
-        <!-- <div class="title">
-                        <i class="uil uil-tachometer-fast-alt"></i>
-                        <span class="text">Dashboard</span>
-                    </div> -->
         <div class="boxes">
           <div class="box box1">
-            <i class="uil uil-thumbs-up"></i>
-            <span class="text">Total Likes</span>
-            <span class="number">50,000</span>
+            <span id="fname"></span>
+            <span id="lname"></span>
+            <span id="age"></span>
+            <!-- <span id="email"></span> -->
+            <span id="address"></span>
+            
           </div>
         </div>
       </div>
@@ -121,8 +120,6 @@
 
         <div class="activity-data">
           <div class="data names">
-            <span class="data-title">Name</span>
-            <span class="data-list">Pre</span>
             <table class="table dropdown" id="MonthRep">
               <thead class="thead-dark">
                 <tr>
@@ -167,14 +164,14 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <!-- <tr>
                   <td>Radwa</td>
-                  <td scope="row">left 2022</td>
+                  <td>left 2022</td>
                   <td>
                     <input type="button" class="btn btn-primary" value="Attend" onclick="">
                   </td>
-                </tr>
-                <tr>
+                </tr> -->
+                <!-- <tr>
                   <td>Gehad</td>
                   <td scope="row">left 2022</td>
                   <td>
@@ -187,7 +184,7 @@
                   <td>
                     <input type="button" class="btn btn-primary" value="Attend" onclick="">
                   </td>
-                </tr>
+                </tr> -->
               </tbody>
             </table>
           </div>
@@ -197,6 +194,7 @@
     </div>
   </section>
 
+  <script src="../scripts/attendance-list.js"></script>
   <script src="../scripts/employee.js"></script>
   <script src="../scripts/load-dummy-data.js"></script>
 </body>
