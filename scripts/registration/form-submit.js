@@ -19,24 +19,29 @@ loginForm.addEventListener('submit', (e) => {
 
     // exist flag
     let exist = false;
-
+    document.cookie = "test=" + JSON.stringify({name:"gehad"});
     // check if user is exist in the system
     users.forEach(user => {
         if(user.username === username && user.password == password){
             exist = true;
 
             // set cookie with user object
+            
             document.cookie = "user=" + JSON.stringify(user);
+         
 
             // map to the right page of the user
+            //cangepath
             if(username == 'admin'){
-                window.location = "pages/dashboard_admin.html"
+                window.location = "dashboard_admin.html"
             }
+            //cangepath
             else if(user.super){
-                window.location = "pages/employee.html?super=true"
+                window.location = "employee.html?super=true"
             }
+            //cangepath
             else{
-                window.location = "pages/employee.html?super=false"
+                window.location = "employee.html?super=false"
             }
         }
     });

@@ -11,6 +11,17 @@ sidebarToggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
 });
 
+// get current user
+let users  = localStorage.getItem('users');
+users = JSON.parse(users);
+user=users[1];
+dd=1
+mm=1
+yyyy=2023
+
+
+build_daily_report();
+build_month_report();
 Dailyreport = document.getElementById("DaliyRep");
 Monthreport = document.getElementById("MonthRep");
 AttendanceOPtion = document.getElementById("AttendanceOption");
@@ -37,4 +48,50 @@ function selectTable(option)
     }
 }
 
+function build_daily_report ()
+{
+   //user = JSON.parse(document.cookie.split("=")[1]);
+   let users  = localStorage.getItem('users');
+   users = JSON.parse(users);
+   user=users[1];
+
+
+   //tb-daily
+   tb_full = document.getElementById('tb-daily');
+   years= user['attendance']["years"]
+   
+   Object.entries(years).forEach(entry => {
+    const [yyyy, value] = entry;
+    Object.entries(value["months"]).forEach(entry => {
+        const [mm, value] = entry;
+        Object.entries(value["days"]).forEach( entry => {
+            const [dd, value] = entry;
+            newRow = document.createElement('tr')
+            newRow.innerHTML=`<td>${yyyy+"-"+mm+"-"+dd}</td>`
+            newRow.innerHTML+=`<td>${value["start"]}</td>`
+            newRow.innerHTML+=`<td>${value["end"]}</td>`
+            tb_full.appendChild(newRow);
+          });
+      });
+  });
+
+
+}
+
+function build_month_report ()
+{
+    tb_mon = document.getElementById('tb-month');
+    mounths= user['attendance']["years"][yyyy]["months"]
+    
+     Object.entries(mounths).forEach(entry => {
+         const [mm, value] = entry;
+             console.log(value);
+             newRow = document.createElement('tr')
+             newRow.innerHTML=`<td>${yyyy+"-"+mm}</td>`
+             newRow.innerHTML+=`<td>${value["atted"]}</td>`
+             newRow.innerHTML+=`<td>${value["absent"]}</td>`
+             newRow.innerHTML+=`<td>${value["late"]}</td>`
+             tb_mon.appendChild(newRow);
+       });
+}
 

@@ -126,12 +126,14 @@
             <table class="table dropdown" id="MonthRep">
               <thead class="thead-dark">
                 <tr>
-                  <th scope="col">Info</th>
-                  <th scope="col">Count</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Attend</th>
+                  <th scope="col">Absence</th>
+                  <th scope="col">Late</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
+              <tbody id = "tb-month">
+                <!-- <tr>
                   <td>Attend</td>
                   <td scope="row">1</td>
                 </tr>
@@ -142,7 +144,7 @@
                 <tr>
                   <td>Late</td>
                   <td scope="row">3</td>
-                </tr>
+                </tr> -->
               </tbody>
             </table>
             <table class="table dropdown" id="DaliyRep">
@@ -153,22 +155,7 @@
                   <th scope="col">Leave Time</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                </tr>
-                <tr>
-                  <td scope="row">2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                </tr>
-                <tr>
-                  <td scope="row">3</td>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                </tr>
+              <tbody id = "tb-daily">
               </tbody>
             </table>
             <table class="table dropdown" id="AttendList">
@@ -211,6 +198,7 @@
   </section>
 
   <script src="../scripts/employee.js"></script>
+  <script src="../scripts/load-dummy-data.js"></script>
 </body>
 
 </html>

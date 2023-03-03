@@ -115,39 +115,25 @@
                             <table class="table dropdown" id = "allemp">
                                 <thead class="thead-dark">
                                   <tr>
-                                    <th scope="col">First Name</th>
-                                    <th scope="col">mail</th>
-                                    <th scope="col">address</th>
+                                    <th scope="col">Full Name</th>
+                                    <th scope="col">Mail</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">Age</th>
                                   </tr>
                                 </thead>
-                                <tbody>
-                                  <tr>
-                                    <td>radwa</td>
-                                    <td>radwa@gay7eta.com</td>
-                                    <td>fe el matba5 </td>
-                                  </tr>
-                                  <tr>
-                                    <td>khaled</td>
-                                    <td>kahles@gay7eta.com</td>
-                                    <td>3la el kanba</td>
-                                  </tr>
-                                  <tr>
-                                    <td>gehad</td>
-                                    <td>gehad@ay7etta.com</td>
-                                    <td>3la el serir </td>
-                                  </tr>
-                                </tbody>
+                                <tbody id ="tb-allemp"></tbody>
                               </table>
                               <table class="table dropdown" id = "full">
                                 <thead class="thead-dark">
                                   <tr>
-                                    <th scope="col">First Name</th>
-                                    <th scope="col">Execuses</th>
+                                    <th scope="col">Full Name</th>
+                                    <th scope="col">Attendance</th>
+                                    <th scope="col">Absence</th>
                                     <th scope="col">Late</th>
                                   </tr>
                                 </thead>
-                                <tbody>
-                                  <tr>
+                                <tbody id = "tb-full-info">
+                                  <!-- <tr>
                                     <td>radwa</td>
                                     <td>5</td>
                                     <td>5</td>
@@ -161,7 +147,7 @@
                                     <td>gehad</td>
                                     <td> 0</td>
                                     <td>5</td>
-                                  </tr>
+                                  </tr> -->
                                 </tbody>
                               </table>
                               <table class="table dropdown" id = "exec">
@@ -171,8 +157,8 @@
                                     <th scope="col">count</th>
                                   </tr>
                                 </thead>
-                                <tbody>
-                                  <tr>
+                                <tbody id="tb-absnt">
+                                  <!-- <tr>
                                     <td>radwa</td>
                                     <td>5</td>
                                   </tr>
@@ -183,7 +169,7 @@
                                   <tr>
                                     <td>gehad</td>
                                     <td> 0</td>
-                                  </tr>
+                                  </tr> -->
                                 </tbody>
                               </table>
                               <table class="table dropdown" id = "late">
@@ -193,8 +179,8 @@
                                     <th scope="col">count</th>
                                   </tr>
                                 </thead>
-                                <tbody>
-                                  <tr>
+                                <tbody id="tb-late">
+                                  <!-- <tr>
                                     <td>radwa</td>
                                     <td>5</td>
                                   </tr>
@@ -205,7 +191,7 @@
                                   <tr>
                                     <td>gehad</td>
                                     <td> 0</td>
-                                  </tr>
+                                  </tr> -->
                                 </tbody>
                               </table>
                               <table class="table dropdown" id = "requests">
@@ -217,34 +203,7 @@
                                     <th scope="col">Acton</th>
                                   </tr>
                                 </thead>
-                                <tbody>
-                                  <tr>
-                                    <td>radwa</td>
-                                    <td>radwa@gay7eta.com</td>
-                                    <td>fe el matba5 </td>
-                                    <td>
-                                        <input type="button"  class="btn btn-primary" value ="Accept" onclick="">
-                                        <input type="button" style="background-color: aliceblue;color:black" class="btn btn-primary" value ="Reject" onclick="">
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>radwa</td>
-                                    <td>radwa@gay7eta.com</td>
-                                    <td>fe el matba5 </td>
-                                    <td>
-                                        <input type="button"  class="btn btn-primary" value ="Accept" onclick="">
-                                        <input type="button" style="background-color: aliceblue;color:black" class="btn btn-primary" value ="Reject" onclick="">
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>radwa</td>
-                                    <td>radwa@gay7eta.com</td>
-                                    <td>fe el matba5 </td>
-                                    <td>
-                                        <input type="button"  class="btn btn-primary" value ="Accept" onclick="">
-                                        <input type="button" style="background-color: aliceblue;color:black" class="btn btn-primary" value ="Reject" onclick="">
-                                    </td>
-                                  </tr>
+                                <tbody id = "tb-request">
                                 </tbody>
                               </table> 
                         </div>
@@ -255,5 +214,7 @@
         </section>
 
         <script src="../scripts/dashboard_admin.js"></script>
+        <!-- <script src="../scripts/load-dummy-data.js"></script>  -->
+        <script src="../scripts/request-confirmation.js"></script>
     </body>
 </html>
