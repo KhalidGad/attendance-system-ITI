@@ -33,15 +33,15 @@ loginForm.addEventListener('submit', (e) => {
             // map to the right page of the user
             //cangepath
             if(username == 'admin'){
-                window.location = "dashboard_admin.html"
+                window.location = "pages/dashboard_admin.html"
             }
             //cangepath
             else if(user.super){
-                window.location = "employee.html?super=true"
+                window.location = "pages/employee.html?super=true"
             }
             //cangepath
             else{
-                window.location = "employee.html?super=false"
+                window.location = "pages/employee.html?super=false"
             }
         }
     });

@@ -43,11 +43,11 @@ users = [
                                     end : '12:00'
                                 }
                             }
-                        ]
+                        }   
                     }
                 }
             }
-        }
+        },
     },
     {
         fname: 'ahmed',
@@ -58,27 +58,25 @@ users = [
         super: false,
         username: 'khaled2',
         password: '1234',
-        attendance: [
-            {
-                year: 2023,
-                months: [
-                    {
-                        month: 1,
-                        attend: 20,
-                        late: 5,
-                        absent: 10,
-                        days: [
-                            {
-                                day: 1,
-                                start: '8:00',
-                                end: '12:00'
+        attendance: {
+            years: {
+                2023:{
+                    months:{
+                        1:{
+                            atted : 20,
+                            late : 5,
+                            absent : 10,
+                            days: {
+                                1 : {
+                                    start:'8:00',
+                                    end : '12:00'
+                                }
                             }
-                        }
+                        }   
                     }
                 }
             }
-        }
-        
+        },
     }
 ];
 
