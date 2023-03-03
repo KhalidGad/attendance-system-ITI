@@ -72,6 +72,21 @@ users = [
                                     end : '12:00'
                                 }
                             }
+                        } ,
+                        2:{
+                            atted : 5,
+                            late : 4,
+                            absent : 21,
+                            days: {
+                                1 : {
+                                    start:'8:00',
+                                    end : '12:00'
+                                },
+                                2 : {
+                                    start:'8:30',
+                                    end : '12:45'
+                                }
+                            }
                         }   
                     }
                 }
@@ -81,7 +96,10 @@ users = [
 ];
 
 requestsJSON = JSON.stringify(requests);
-localStorage.setItem('requests', requestsJSON);
-
 usersJSON = JSON.stringify(users);
-localStorage.setItem('users', usersJSON);
+
+if (localStorage.getItem("requests")=== null)
+    localStorage.setItem('requests', requestsJSON);
+
+if(localStorage.getItem("users")=== null)
+    localStorage.setItem('users', usersJSON);

@@ -1,4 +1,4 @@
-const body = document.querySelector("body"),
+body = document.querySelector("body"),
        modeToggle = body.querySelector(".mode-toggle");
         sidebar = body.querySelector("nav");
        sidebarToggle = body.querySelector(".sidebar-toggle");
@@ -12,12 +12,14 @@ sidebarToggle.addEventListener("click", () => {
 });
 
 // get current user
-let users  = localStorage.getItem('users');
-users = JSON.parse(users);
-user=users[1];
-dd=1
-mm=1
-yyyy=2023
+user  = document.cookie.split("user=")[1].split(';')[0]
+user = JSON.parse(user);
+
+//get current date 
+now = new Date();
+yyyy = now.getFullYear();
+mm = now.getMonth();
+dd = now.getDate();
 
 
 build_daily_report();
@@ -51,9 +53,6 @@ function selectTable(option)
 function build_daily_report ()
 {
    //user = JSON.parse(document.cookie.split("=")[1]);
-   let users  = localStorage.getItem('users');
-   users = JSON.parse(users);
-   user=users[1];
 
 
    //tb-daily
@@ -95,16 +94,16 @@ function build_month_report ()
        });
 }
 
-address=JSON.parse(document.cookie.split("=")[1]).address
+address=JSON.parse(document.cookie.split("user=")[1].split(';')[0]).address
 document.getElementById("address").innerText="Address : "+address;
 
-fname=JSON.parse(document.cookie.split("=")[1]).fname
+fname=JSON.parse(document.cookie.split("user=")[1].split(';')[0]).fname
 document.getElementById("fname").innerText="First Name : "+fname;
 
-lname=JSON.parse(document.cookie.split("=")[1]).lname
+lname=JSON.parse(document.cookie.split("user=")[1].split(';')[0]).lname
 document.getElementById("lname").innerText="Last Name :  "+lname;
 
-age=JSON.parse(document.cookie.split("=")[1]).age
+age=JSON.parse(document.cookie.split("user=")[1].split(';')[0]).age
 document.getElementById("age").innerText="Age :  "+age;
 
 // email=JSON.parse(document.cookie.split("=")[1]).email

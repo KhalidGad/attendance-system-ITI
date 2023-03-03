@@ -6,10 +6,10 @@ build_request_table();
 
 
 //get current date 
-today = new Date();
-dd = String(today.getDate()).padStart(2, '0');
-mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-var yyyy = today.getFullYear();
+now = new Date();
+yyyy = now.getFullYear();
+mm = now.getMonth();
+dd = now.getDate();
 
 
 
@@ -37,7 +37,8 @@ function addNewUser(accept){
     newUser = newUser[0]
     newUser['username'] = generateString(5);
     newUser['password'] = generateString(8);
-    newUser['attendance'] = [];
+    newUser['super']=false ;
+    newUser['attendance'] = {years : {}};
 
     let users = localStorage.getItem('users');
     users = JSON.parse(users);
