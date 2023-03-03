@@ -70,7 +70,7 @@
         <li>
           <a href="#">
             <i class="uil uil-signout"></i>
-            <span class="link-name">Logout</span>
+            <span class="link-name" id="logout">Logout</span>
           </a>
         </li>
 
@@ -197,6 +197,12 @@
   <script src="../scripts/attendance-list.js"></script>
   <script src="../scripts/employee.js"></script>
   <!--<script src="../scripts/load-dummy-data.js"></script> -->
+  <script>
+    document.getElementById('logout').addEventListener('click', (e)=>{
+      document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      window.location='/';
+    })
+  </script>
 </body>
 
 </html>

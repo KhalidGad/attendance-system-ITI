@@ -80,18 +80,20 @@ function build_daily_report ()
 function build_month_report ()
 {
     tb_mon = document.getElementById('tb-month');
-    mounths= user['attendance']["years"][yyyy]["months"]
-    
-     Object.entries(mounths).forEach(entry => {
-         const [mm, value] = entry;
-             console.log(value);
-             newRow = document.createElement('tr')
-             newRow.innerHTML=`<td>${yyyy+"-"+mm}</td>`
-             newRow.innerHTML+=`<td>${value["atted"]}</td>`
-             newRow.innerHTML+=`<td>${value["absent"]}</td>`
-             newRow.innerHTML+=`<td>${value["late"]}</td>`
-             tb_mon.appendChild(newRow);
-       });
+    if(user['attendance']["years"][yyyy]){
+        mounths= user['attendance']["years"][yyyy]["months"]
+        
+        Object.entries(mounths).forEach(entry => {
+            const [mm, value] = entry;
+                console.log(value);
+                newRow = document.createElement('tr')
+                newRow.innerHTML=`<td>${yyyy+"-"+mm}</td>`
+                newRow.innerHTML+=`<td>${value["atted"]}</td>`
+                newRow.innerHTML+=`<td>${value["absent"]}</td>`
+                newRow.innerHTML+=`<td>${value["late"]}</td>`
+                tb_mon.appendChild(newRow);
+        });
+    }
 }
 
 address=JSON.parse(document.cookie.split("user=")[1].split(';')[0]).address

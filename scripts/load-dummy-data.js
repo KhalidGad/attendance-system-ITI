@@ -3,14 +3,21 @@ requests = [
         fname: 'gehad',
         lname: 'mohamed',
         address: 'cairo',
-        email: 'gehad@gmail.com',
+        email: 'gehadmohamed8228@gmail.com',
         age: 22
     },
     {
         fname: 'radwa',
         lname: 'hatem',
         address: 'cairo',
-        email: 'radwa@gmail.com',
+        email: 'radwa.hatem.radwan9@gmail.com',
+        age: 23
+    },
+    {
+        fname: 'khaled',
+        lname: 'gad',
+        address: 'mansoura',
+        email: 'khaled.626528@gmail.com',
         age: 23
     }
 ];
@@ -90,6 +97,64 @@ users = [
                         }   
                     }
                 }
+            }
+        },
+    },
+    {
+        fname: 'radwa',
+        lname: 'hatem',
+        address: 'cairo',
+        email: 'radwa@gmail.com',
+        age: 32,
+        super: false,
+        username: 'radwa',
+        password: '1234',
+        attendance: {
+            years: {
+                2023:{
+                    months:{
+                        1:{
+                            atted : 20,
+                            late : 5,
+                            absent : 10,
+                            days: {
+                                1 : {
+                                    start:'8:00',
+                                    end : '12:00'
+                                }
+                            }
+                        } ,
+                        2:{
+                            atted : 5,
+                            late : 4,
+                            absent : 21,
+                            days: {
+                                1 : {
+                                    start:'8:00',
+                                    end : '12:00'
+                                },
+                                2 : {
+                                    start:'8:30',
+                                    end : '12:45'
+                                }
+                            }
+                        }   
+                    }
+                }
+            }
+        },
+    },
+    {
+        fname: 'gehad',
+        lname: 'mphamed',
+        address: 'cairo',
+        email: 'gehad@gmail.com',
+        age: 25,
+        super: false,
+        username: 'gehad',
+        password: '1234',
+        attendance: {
+            years: {
             }
         },
     }

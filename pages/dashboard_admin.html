@@ -11,6 +11,8 @@
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+          <!-- send email api -->
+          <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
           <title>Admin Dashboard</title>
     </head>
     <body>
@@ -59,7 +61,7 @@
                     <li>
                         <a href="#">
                             <i class="uil uil-signout"></i> 
-                            <span class="link-name">Logout</span>
+                            <span class="link-name" id="logout">Logout</span>
                         </a>
                     </li>
 
@@ -210,5 +212,11 @@
         <script src="../scripts/dashboard_admin.js"></script>
         <!-- <script src="../scripts/load-dummy-data.js"></script>  -->
         <script src="../scripts/request-confirmation.js"></script>
+        <script>
+          document.getElementById('logout').addEventListener('click', (e)=>{
+            document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            window.location='/'
+          });
+        </script>
     </body>
 </html>

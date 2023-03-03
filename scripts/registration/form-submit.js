@@ -19,7 +19,6 @@ loginForm.addEventListener('submit', (e) => {
 
     // exist flag
     let exist = false;
-    document.cookie = "test=" + JSON.stringify({name:"gehad"});
     // check if user is exist in the system
     users.forEach(user => {
         if(user.username === username && user.password == password){
@@ -61,7 +60,7 @@ signupForm.addEventListener('submit', (e) => {
     // make object for user data
     let user = {
         'fname': fname.value,
-        'lanme': lname.value,
+        'lname': lname.value,
         'address': address.value,
         'email': email.value,
         'age': age.value,
@@ -69,13 +68,22 @@ signupForm.addEventListener('submit', (e) => {
 
     // save data into local storage
     let requests = localStorage.getItem('requests');
+    let users = localStorage.getItem('users');
     requests = JSON.parse(requests);
-    requests.push(user);
-    requestsJSON = JSON.stringify(requests);
-    localStorage.setItem('requests', requestsJSON);
+    users = JSON.parse(users);
 
-    console.log(user);
-    openPopup();
+    exist = requests.some(request => request.email === email.value) || users.some(user => user.email === email.value);
+    console.log("exist = " + exist);
+    if(exist){
+        console.log("maogod")
+        document.getElementById('email-error').style.display='flex'
+    }else{
+        requests.push(user);
+        requestsJSON = JSON.stringify(requests);
+        localStorage.setItem('requests', requestsJSON);
+        openPopup();
+    }
+    console.log(user);  
 })
 
 popupBtn.addEventListener("click", closePopup);

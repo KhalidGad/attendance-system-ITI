@@ -99,11 +99,15 @@
                             <input type="email" name="email" id="email-input" placeholder="Enter your email" required>
                             <i class="uil uil-envelope-alt"></i>
                         </div>
+                        <span class="error" id="email-error">
+                            <i class="uil uil-exclamation-circle error-icon"></i>
+                            <p class="error-text">email is already exist</p>
+                        </span>
                     </div>
                     <!-- Age field -->
                     <div class="field">
                         <div class="input-field">
-                            <input type="number" name="age" id="age-input" placeholder="Enter your age" required>
+                            <input type="number" name="age" min="0" id="age-input" placeholder="Enter your age" required>
                             <i class="uil uil-calender"></i>
                         </div>
                     </div>
